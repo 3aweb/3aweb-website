@@ -1,0 +1,12 @@
+@use '../../../styles/mixins';
+
+.Button {
+  @include mixins.glass;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  font-size: 1.375rem;
+  text-decoration: none;
+}
