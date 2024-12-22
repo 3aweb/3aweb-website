@@ -17,7 +17,7 @@
   background: linear-gradient(127deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 212, 255, .3) 100%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(7px);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 
   &:before {
     content: '';
@@ -30,14 +30,25 @@
     top: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
   }
 
-  &:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.05);
 
     &:before {
-      opacity: 1;
+      opacity: .3;
     }
   }
 }
